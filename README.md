@@ -17,6 +17,10 @@
 4. 建立 Cloudflare Worker，將 `worker.js` 部署；使用 `wrangler secret put OCR_SPACE_API_KEY` 寫入 OCR.Space 金鑰。
 5. 在 `worker.js` 中將 `https://您的帳號.github.io` 改成實際 GitHub Pages 網址，部署 Worker 後把網址填入 `config.js`。
 
+### 試作版（不使用 Worker）
+
+可在 `config.js` 填入 `ocrSpaceApiKey`，網頁會直接呼叫 OCR.Space。此 Key 會隨 GitHub 網頁公開，只可短期測試；改成正式版時請移除該欄位並使用 Worker。
+
 ## 已完成的第一版
 
 - 拍照或從相簿選名片、OCR.Space 呼叫介面與手動校對。
